@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+
+# Uploads (video files)
+uploads/
+
+# Environment variables
+.env
