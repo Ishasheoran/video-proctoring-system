@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CombinedDetection from './components/webcam';
 import InterviewerDashboard from './components/interviewer';
-import './App.css';
+import './index.css';
 
 function App() {
   const [currentView, setCurrentView] = useState('candidate');
