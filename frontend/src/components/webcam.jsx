@@ -134,7 +134,7 @@ function CombinedDetection() {
 
       // Notify backend interview ended
       try {
-        await fetch("http://localhost:8000/end", {
+        await fetch("https://video-proctoring-system-3q6z.onrender.com/end", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ candidateId: candidateName }),
