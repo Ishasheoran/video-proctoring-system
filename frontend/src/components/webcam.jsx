@@ -118,7 +118,7 @@ function CombinedDetection() {
     setStatus("Recording...");
 
     // Notify backend interview started
-    fetch("http://localhost:8000/start", {
+    fetch("https://video-proctoring-system-3q6z.onrender.com/start", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ candidateId: candidateName, name: candidateName }),
