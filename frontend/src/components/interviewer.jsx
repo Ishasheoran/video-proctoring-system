@@ -20,7 +20,7 @@ function InterviewerDashboard() {
       setError('');
       setDebugInfo('Fetching candidates from server...');
       
-      const response = await fetch('http://localhost:8000/candidates');
+      const response = await fetch('https://video-proctoring-system-3q6z.onrender.com/candidates');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -44,7 +44,7 @@ function InterviewerDashboard() {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch(`http://localhost:8000/report/${candidateId}`);
+      const response = await fetch(`https://video-proctoring-system-3q6z.onrender.com/report/${candidateId}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -71,7 +71,7 @@ function InterviewerDashboard() {
       console.log('🔍 Looking for video for candidate:', candidateId);
       
       // Fetch list of all videos
-      const response = await fetch('http://localhost:8000/videos');
+      const response = await fetch('https://video-proctoring-system-3q6z.onrender.com/videos');
       if (!response.ok) throw new Error('Failed to fetch videos');
       
       const data = await response.json();
@@ -116,7 +116,7 @@ function InterviewerDashboard() {
       console.log('Selected video:', videoFilename);
       
       // Use the streaming endpoint
-      const videoUrl = `http://localhost:8000/video/${videoFilename}`;
+      const videoUrl = `https://video-proctoring-system-3q6z.onrender.com/video/${videoFilename}`;
       console.log('Using video URL:', videoUrl);
       
       setVideoUrl(videoUrl);
@@ -132,7 +132,7 @@ function InterviewerDashboard() {
 
   const clearCandidateData = async (candidateId) => {
     try {
-      const response = await fetch(`http://localhost:8000/candidate/${candidateId}`, {
+      const response = await fetch(`https://video-proctoring-system-3q6z.onrender.com/candidate/${candidateId}`, {
         method: 'DELETE'
       });
       
