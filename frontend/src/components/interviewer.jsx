@@ -290,7 +290,7 @@ function InterviewerDashboard() {
 
               <div className="report-actions">
                 <a 
-                  href={`http://localhost:8000/report/${report.candidateId}/pdf`} 
+                  href={`https://video-proctoring-system-3q6z.onrender.com/report/${report.candidateId}/pdf`} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="download-btn"
