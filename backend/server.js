@@ -25,11 +25,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Connect to MongoDB
-mongoose.connect("mongodb+srv://ishasheoran46:ishasheoran46@cluster0.o1pgy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+require('dotenv').config();
+
+
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+})
+.then(() => console.log("✅ MongoDB connected"))
+.catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Schema for logs
 const logSchema = new mongoose.Schema({
