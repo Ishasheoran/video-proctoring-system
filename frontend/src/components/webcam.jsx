@@ -25,7 +25,7 @@ function CombinedDetection() {
     if (now - lastEventTime > cooldown) {
       lastEvents.current[eventType] = now;
       try {
-        await fetch("http://localhost:8000/logs", {
+        await fetch("https://video-proctoring-system-3q6z.onrender.com/logs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -101,7 +101,7 @@ function CombinedDetection() {
       formData.append("video", blob, filename);
 
       try {
-        const response = await fetch("http://localhost:8000/upload", {
+        const response = await fetch("https://video-proctoring-system-3q6z.onrender.com/upload", {
           method: "POST",
           body: formData,
         });
