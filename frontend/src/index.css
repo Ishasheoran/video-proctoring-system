@@ -1,4 +1,4 @@
-/* Recording indicator */
+.detection-container{text-align:center;}
 .recording-indicator {
   display: inline-block;
   width: 12px;
